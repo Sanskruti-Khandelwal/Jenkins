@@ -35,7 +35,7 @@ pipeline {
 	stage('Deploy')	{
 		steps{
 			sh '''
-				scp -i Jenkins/Sanskruti.pem Jenkins/ linux@ec2-54-167-150-109.compute-1.amazonaws.com:~
+				scp -i Jenkins/20921-Sanskruti.pem Jenkins/ linux@ec2-54-167-150-109.compute-1.amazonaws.com:~
 			'''
 		}
 	}
