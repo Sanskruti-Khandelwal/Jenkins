@@ -19,13 +19,13 @@ pipeline {
 				python3 -m venv 20921
 				source 20921/bin/activate
 				pip install pylint
+				echo $PATH
 			'''
 		}
 	}
 	stage('Test')	{
 		steps{
 			sh '''
-				echo $PATH
 				python Jenkins/tests/test_name.py
 				python Jenkins/tests/test_email.py
 				python Jenkins/tests/test_gender.py
