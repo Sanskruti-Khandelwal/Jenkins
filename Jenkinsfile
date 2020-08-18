@@ -6,10 +6,18 @@ pipeline {
                 cleanWs()
             }
         }
-		stage('Check out SCM')	{
-			steps{
-				sh 'git clone https://github.com/Sanskruti-Khandelwal/Jenkins.git'
-			}
+	stage('Check out SCM') {
+		steps {
+			sh 'git clone https://github.com/Sanskruti-Khandelwal/Jenkins.git'
 		}
+	}
+	stage('Build')	{
+		steps{
+			sh '''
+				sudo yum install python -y
+				virtualenv 20921-env
+			'''
+		}
+	}
     }
 }
