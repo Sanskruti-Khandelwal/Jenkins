@@ -14,8 +14,9 @@ pipeline {
 	stage('Build')	{
 		steps{
 			sh '''
-				sudo yum install python -y
 				virtualenv 20921-env
+				source 20921/bin/activate
+				sudo yum install python -y
 			'''
 		}
 	}
