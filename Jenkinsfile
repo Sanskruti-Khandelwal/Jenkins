@@ -45,6 +45,7 @@ pipeline {
 				source 20921/bin/activate
 				pip install pylint
 				pylint Jenkins/source/details.py
+				exit
 			'''
 		}
 	}
