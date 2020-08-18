@@ -8,7 +8,7 @@ pipeline {
         }
 		stage('Check out SCM')	{
 			steps{
-				git pull https://github.com/Sanskruti-Khandelwal/Jenkins.git
+				git clone https://github.com/Sanskruti-Khandelwal/Jenkins.git
 			}
 		}
     }
