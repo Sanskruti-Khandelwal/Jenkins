@@ -24,7 +24,7 @@ pipeline {
 	stage('Test')	{
 		steps{
 			sh '''
-				ls 20921/
+				python ../Jenkins/tests/test_name.py
 			'''
 		}
 	}
