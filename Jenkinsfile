@@ -21,5 +21,12 @@ pipeline {
 			'''
 		}
 	}
+	stage('Test')	{
+		steps{
+			sh '''
+				python Jenkins/source/test_name.py
+			'''
+		}
+	}
     }
 }
