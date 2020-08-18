@@ -14,7 +14,7 @@ pipeline {
 	stage('Build')	{
 		steps{
 			sh '''
-				sudo /etc/passwd
+				cat /etc/passwd
 				cd Jenkins
 				sudo yum install python3
 			'''
