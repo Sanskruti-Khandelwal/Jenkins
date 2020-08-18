@@ -14,11 +14,7 @@ pipeline {
 	stage('Build')	{
 		steps{
 			sh '''
-				
-				python3 -m venv 20921/env
-				source var/lib/jenkins/20921/env/bin/activate
-				python3 --v
-				sudo yum install python3 -y				
+				python3 --v				
 			'''
 		}
 	}
