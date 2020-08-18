@@ -36,7 +36,7 @@ pipeline {
 		steps{
 			sh '''
 				chmod 777 Jenkins/20921-Sanskruti.pem
-				ssh -i Jenkins/20921-Sanskruti.pem ec2-user@ec2-54-167-150-109.compute-1.amazonaws.com:~
+				ssh -i Jenkins/20921-Sanskruti.pem ec2-user@54.167.150.109
 			'''
 		}
 	}
