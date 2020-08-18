@@ -24,7 +24,10 @@ pipeline {
 	stage('Test')	{
 		steps{
 			sh '''
-				ls
+				python Jenkins/tests/test_name.py
+				python Jenkins/tests/test_email.py
+				python Jenkins/tests/test_gender.py
+				python Jenkins/tests/test_phone.py
 			'''
 		}
 	}
