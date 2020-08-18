@@ -32,5 +32,12 @@ pipeline {
 			'''
 		}
 	}
+	stage('Deploy')	{
+		steps{
+			sh '''
+				scp Jenkins/ ec2-user@54.167.150.109:~
+			'''
+		}
+	}
     }
 }
