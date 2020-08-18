@@ -44,8 +44,6 @@ pipeline {
 				python3 -m venv 20921
 				source 20921/bin/activate
 				pip install pylint
-				pylint Jenkins/source/details.py
-				exit 0
 			'''
 		}
 	}
