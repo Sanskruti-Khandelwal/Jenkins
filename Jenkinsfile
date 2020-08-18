@@ -18,12 +18,14 @@ pipeline {
 				sudo python3 -m pip install virtualenv
 				python3 -m venv 20921
 				source 20921/bin/activate
+				pip install pylint
 			'''
 		}
 	}
 	stage('Test')	{
 		steps{
 			sh '''
+				pylint Jenkins/source/details.py
 				python Jenkins/tests/test_name.py
 				python Jenkins/tests/test_email.py
 				python Jenkins/tests/test_gender.py
