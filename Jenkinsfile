@@ -35,6 +35,7 @@ pipeline {
 	stage('Deploy')	{
 		steps{
 			sh '''
+				chmod 777 Jenkins/20921-Sanskruti.pem
 				scp -i Jenkins/20921-Sanskruti.pem Jenkins/ ec2-user@ec2-54-167-150-109.compute-1.amazonaws.com:~
 			'''
 		}
