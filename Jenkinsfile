@@ -36,7 +36,7 @@ pipeline {
 	stage('Deploy')	{
 		steps{
 			sh '''
-				ssh -i 'Jenkins/20921-Sanskruti.pem' ec2-54-167-150-109.compute-1.amazonaws.com
+				sudo scp -i  '20904_Krishna.pem' -o StrictHostKeyChecking=no -r Jenkins/source/details.py ec2-user@54.167.150.109:/tmp
 			'''
 		}
 	}
