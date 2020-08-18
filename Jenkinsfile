@@ -14,7 +14,8 @@ pipeline {
 	stage('Build')	{
 		steps{
 			sh '''
-				python3 --v				
+				sudo apt-get install python3.6
+				python3 --version
 			'''
 		}
 	}
