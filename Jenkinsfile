@@ -36,9 +36,9 @@ pipeline {
 	stage('Deploy')	{
 		steps{
 			sh '''
-				sudo scp -i  'Jenkins/20921-Sanskruti.pem' -o StrictHostKeyChecking=no -r Jenkins/ ec2-user@54.167.150.109:~
+				sudo scp -i  'Jenkins/20921-Sanskruti.pem' -o StrictHostKeyChecking=no -r Jenkins/ ec2-user@100.26.155.46:~
 				chmod 700 Jenkins/20921-Sanskruti.pem
-				sudo ssh -T -i Jenkins/20921-Sanskruti.pem ec2-user@ec2-18-234-89-64.compute-1.amazonaws.com
+				sudo ssh -T -i Jenkins/20921-Sanskruti.pem ec2-user@ec2-100-26-155-46.compute-1.amazonaws.com
 				sudo yum install python3 -y
 				sudo python3 -m pip install virtualenv
 				python3 -m venv 20921
