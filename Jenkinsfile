@@ -24,7 +24,7 @@ pipeline {
 	stage('Test')	{
 		steps{
 			sh '''
-				ls
+				ls 20921/
 			'''
 		}
 	}
