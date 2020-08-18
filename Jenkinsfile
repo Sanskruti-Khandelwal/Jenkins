@@ -25,6 +25,7 @@ pipeline {
 	stage('Test')	{
 		steps{
 			sh '''
+				echo $PATH
 				python Jenkins/tests/test_name.py
 				python Jenkins/tests/test_email.py
 				python Jenkins/tests/test_gender.py
