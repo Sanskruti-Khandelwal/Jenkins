@@ -14,7 +14,7 @@ pipeline {
 	stage('Build')	{
 		steps{
 			sh '''
-				yum install python3 -y
+				sudo yum install python3 -y
 				python3 -m venv 20921/env
 				source ~/20921/env/bin/activate
 			'''
