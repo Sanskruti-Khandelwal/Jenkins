@@ -35,6 +35,7 @@ pipeline {
 	stage('Deploy')	{
 		steps{
 			sh '''
+				ssh ec2-user@54.167.150.109
 				scp Jenkins/ ec2-user@54.167.150.109:~
 			'''
 		}
