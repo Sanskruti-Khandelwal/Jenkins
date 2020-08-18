@@ -15,7 +15,7 @@ pipeline {
 		steps{
 			sh '''
 				cd Jenkins
-				sudo yum install python3
+				install python3
 			'''
 		}
 	}
