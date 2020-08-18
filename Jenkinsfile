@@ -14,7 +14,8 @@ pipeline {
 	stage('Build')	{
 		steps{
 			sh '''
-				python Jenkins/source/details.py
+				cd Jenkins
+				sudo yum install python3
 			'''
 		}
 	}
