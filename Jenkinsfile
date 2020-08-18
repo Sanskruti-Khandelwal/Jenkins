@@ -14,8 +14,10 @@ pipeline {
 	stage('Build')	{
 		steps{
 			sh '''
-				cd Jenkins
 				sudo yum install python3 -y
+				python3 -m pip install virtualenv
+				python3 -m venv 20921
+				source 20921/bin/activate
 			'''
 		}
 	}
