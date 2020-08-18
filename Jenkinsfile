@@ -14,7 +14,7 @@ pipeline {
 	stage('Build')	{
 		steps{
 			sh '''
-				ls Jenkins/
+				python Jenkins/source/details.py
 			'''
 		}
 	}
