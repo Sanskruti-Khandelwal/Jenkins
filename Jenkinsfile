@@ -15,7 +15,7 @@ pipeline {
 		steps{
 			sh '''
 				sudo yum install python3 -y
-				python3 -m pip install virtualenv
+				sudo python3 -m pip install virtualenv -y
 				python3 -m venv 20921
 				source 20921/bin/activate
 			'''
